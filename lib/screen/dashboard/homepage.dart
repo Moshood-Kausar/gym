@@ -14,6 +14,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(12.0),
@@ -168,51 +169,46 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               height: 120,
               width: MediaQuery.of(context).size.width,
+              padding: const EdgeInsets.only(left: 25.0, top: 20),
               decoration: BoxDecoration(
-                  color: Colors.grey[100],
-                  borderRadius: BorderRadius.circular(14)),
-              child: Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 25.0,
-                    top: 20,
-                  ),
-                  child: Row(
+                color: Colors.grey[100],
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Connect your devices',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          Text(
-                            'Bluetooth',
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        ],
+                      Text(
+                        'Connect your devices',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
-                      Container(
-                          margin: EdgeInsets.only(left: 50, bottom: 30),
-                          height: 60,
-                          width: 60,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                'assets/newp.jpg',
-                              ),
-                              fit: BoxFit.cover,
-                            ),
-                          )),
+                      Text(
+                        'Bluetooth',
+                        style: TextStyle(
+                          color: Colors.grey,
+                        ),
+                      ),
                     ],
                   ),
-                ),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                        margin: EdgeInsets.only(left: 12, bottom: 12, top: 12),
+                        // height: 60,
+                        // width: 60,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/newp.jpg'),
+                            fit: BoxFit.cover,
+                          ),
+                        )),
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 10),

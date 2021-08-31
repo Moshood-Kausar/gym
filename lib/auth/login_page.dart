@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gym/auth/registration_page.dart';
-import 'package:gym/screen/dashboard/homepage.dart';
 import 'package:gym/screen/dashboard/main_page.dart';
 import 'package:gym/style/colors.dart';
 import 'package:gym/style/exports.dart';
@@ -122,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                           )
-                        : TextButton(
+                        : MyAppButton(
                             onPressed: () async {
                               if (_formKey.currentState!.validate()) {
                                 setState(() {
@@ -161,7 +160,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 });
                               }
                             },
-                            child: Text('Sign In | email & password.'),
+                            txt: 'Sign In',
                           ),
                     SizedBox(height: 15),
                     Row(
@@ -180,16 +179,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                     SizedBox(height: 30),
-                    _isLoading
-                        ? SizedBox(
-                            height: 30,
-                            width: 30,
-                            child: CircularProgressIndicator(
-                              color: AppColor.mainColor,
-                              strokeWidth: 2.2,
-                            ),
-                          )
-                        : Text('d')
+                    // _isLoading
+                    //     ? SizedBox(
+                    //         height: 30,
+                    //         width: 30,
+                    //         child: CircularProgressIndicator(
+                    //           color: AppColor.mainColor,
+                    //           strokeWidth: 2.2,
+                    //         ),
+                    //       )
+                    //     : Text('d')
                   ],
                 ),
               ),
