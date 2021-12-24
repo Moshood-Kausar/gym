@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gym/auth/registration_page.dart';
 import 'package:gym/screen/dashboard/main_page.dart';
-import 'package:gym/style/colors.dart';
 import 'package:gym/style/exports.dart';
 import 'package:gym/widget/widget_exports.dart';
 

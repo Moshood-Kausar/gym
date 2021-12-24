@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gym/screen/firebase-service.dart';
 import 'package:gym/style/exports.dart';
-import 'package:gym/widget/text_form.dart';
 import 'dart:async';
 import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
